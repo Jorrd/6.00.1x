@@ -1,0 +1,15 @@
+def item_order(order):
+    salad_count = 0
+    hamburger_count = 0
+    water_count = 0
+    order = order.replace(" ", ",")
+    order = order.split(',')
+    #print order
+    for food in order:
+        if food == "salad":
+            salad_count += 1
+        elif food == "hamburger":
+            hamburger_count += 1
+        elif food == "water":
+            water_count += 1
+    return "salad:" + str(salad_count) + " hamburger:" + str(hamburger_count) + " water:" + str(water_count)

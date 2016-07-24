@@ -1,0 +1,19 @@
+lowerBound = balance/12.0
+upperBound = (balance*1.2)/12.0
+while True:
+    avg = (lowerBound+upperBound)/2.0
+    count = 1
+    balance1 = balance
+    while (count < 13):
+        minPayment = avg
+        balance1 = balance1 - minPayment
+        balance1 = balance1 + balance1*(annualInterestRate/12.0)
+        count = count + 1
+    
+    if balance1 > 0:
+        lowerBound = avg
+    elif balance1 < -1:
+        upperBound = avg
+    else:
+        break
+print "Lowest Payment: " + str(round(avg,2))   

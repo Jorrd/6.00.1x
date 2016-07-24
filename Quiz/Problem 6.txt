@@ -1,0 +1,14 @@
+def flatten(aList):
+    ''' 
+    aList: a list 
+    Returns a copy of aList, which is a flattened version of aList 
+    '''
+    bList = []
+    for i in range(len(aList)):
+        if type(aList[i]) == list:
+            cList = flatten(aList[i])
+            for i in range(len(cList)):
+                bList.append(cList[i])
+        else:
+            bList.append(aList[i])
+    return bList

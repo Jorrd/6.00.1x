@@ -1,0 +1,14 @@
+count = 1
+total = 0
+
+while (count < 13):
+    minPayment = monthlyPaymentRate*balance
+    balance = balance - minPayment
+    balance = balance + balance*(annualInterestRate/12.0)
+    total = total + minPayment
+    print "Month: " + str(count)
+    print "Minimum monthly payment: " + str(round(minPayment, 2))
+    print "Remaining balance: " + str(round(balance, 2))
+    count = count + 1
+print "Total paid: " + str(round(total,2))
+print "Remaining balance: " + str(round(balance, 2))

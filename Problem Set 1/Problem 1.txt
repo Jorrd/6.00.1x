@@ -1,0 +1,7 @@
+Count = 0
+for char in s:
+    Vowel = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
+    if char in Vowel:
+        Count = Count + 1
+
+print "Number of vowels: " + str(Count)
